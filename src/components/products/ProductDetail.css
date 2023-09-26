@@ -1,0 +1,9 @@
+img {
+  width: 125px;
+  height: 125px;
+}
+
+.card-products-container {
+  display: flex;
+  flex-wrap: wrap;
+}

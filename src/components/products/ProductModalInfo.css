@@ -1,0 +1,20 @@
+.product-modal-container {
+  width: 33vw;
+  height: 50vh;
+  text-align: center;
+  margin: auto;
+  margin-top: 75px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  color: black;
+}
+
+.MuiSvgIcon-root {
+  color: red;
+  font-size: 15px;
+}
