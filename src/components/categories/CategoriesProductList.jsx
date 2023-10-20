@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useAsyncMock from "../../hooks/useAsyncMock";
 import products from '../../mocks/products.json';
-import { CircularProgress, Grid, Typography } from "@mui/material";
+import { CircularProgress, Grid } from "@mui/material";
 import ProductDetail from "../products/ProductDetail";
 
 const CategoriesProductList = () => {
@@ -10,7 +10,7 @@ const CategoriesProductList = () => {
 
   if(loading) return <CircularProgress />
 
-  const categorySelected = data.filter( category => category.category.toLowerCase() === categoryId.toLowerCase() );
+  const categorySelected = data.filter(category => category.category.toLowerCase() === categoryId.toLowerCase() );
 
   return ( 
     <div>

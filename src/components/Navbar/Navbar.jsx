@@ -1,6 +1,6 @@
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { NavLink } from "react-router-dom";
+import CartWiget from "../CartWidget/CartWidget";
 
 const Navbar = () => {
   return (
@@ -12,7 +12,9 @@ const Navbar = () => {
         <Button component={NavLink} to="/" sx={{ backgroundColor: "white" }}>Home</Button>
         <Button component={NavLink} to="/products" sx={{ color: "white" }}>Products</Button>
         <Button component={NavLink} to="/categories" sx={{ color: "white" }}>Categories</Button>
-        <AddShoppingCartIcon />
+        <NavLink to="/cart">
+          <CartWiget />
+        </NavLink>
       </Toolbar>
     </AppBar>);
 }

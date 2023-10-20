@@ -1,20 +1,23 @@
-.product-modal-container {
-  width: 33vw;
-  height: 50vh;
-  text-align: center;
-  margin: auto;
-  margin-top: 75px;
-  border-radius: 15px;
+.modal-container{
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
-  background-color: aliceblue;
-  color: black;
+  border-radius: 15px;
 }
 
-.MuiSvgIcon-root {
-  color: red;
-  font-size: 15px;
+img{
+  margin: 20px;
+}
+
+h2{
+  margin: 5px;
+}
+
+p{
+  margin: 5px;
+  font-size: 20px;
 }

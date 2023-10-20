@@ -2,12 +2,31 @@ import { CircularProgress, Grid, Typography } from "@mui/material";
 import useAsyncMock from "../../hooks/useAsyncMock";
 import products from "../../mocks/products.json";
 import ProductDetail from "./ProductDetail";
+import { useEffect, useState } from "react";
+import { collection, getDocs, getFirestore, limit } from "firebase/firestore";
 
 const ProductList = () => {
-  const { data, loading } = useAsyncMock(products)
+  const [data, setData] = useState([])
+  const [loading, setLoading] =useState(true);
+  const [error, setError] = useState("");
 
-  if(loading)
-  return <CircularProgress />
+  useEffect(() => {
+    const fetchData = async() =>{
+      const db = getFirestore();
+      const querySnapshot = await getDocs(collection(db, 'products'))
+      const newData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+      setData(newData)
+      setLoading(false)
+    }
+
+    fetchData()
+
+  },[])
+
+
+
+  /* const { data, loading } = useAsyncMock(products) */
+  if(loading) return <CircularProgress /> 
 
   return (
     <div className="container">
