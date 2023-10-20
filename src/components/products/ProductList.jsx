@@ -30,7 +30,7 @@ const ProductList = () => {
 
   return (
     <div className="container">
-      <Typography variant="h4" style={{ color: "black" }} mt={10} mb={3} align="center">
+      <Typography variant="h4" style={{ color: "black" }} mt={12} mb={3} align="center">
         Products
       </Typography>
       <Grid container spacing={3}>
